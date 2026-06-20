@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<!--
+  ============================================================
+  LANDING PAGE — เครื่องทำนมถั่ว OSTMARS (Nut Milk Maker)
+  ตลาด: ประเทศไทย · clone จาก template D1 (giữ hệ màu đỏ)
+  ------------------------------------------------------------
+  Cấu hình đã hoàn tất (xem CLAUDE.md): webhook Apps Script (tab "Máy làm sữa hạt"),
+  Messenger m.me/61591016493564, FB Page 61591016493564. Page sẵn sàng deploy.
+  ============================================================
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>เครื่องทำนมถั่ว OSTMARS — ทำนมถั่ว โจ๊ก สมูทตี้ ได้ในเครื่องเดียว</title>
+<meta name="description" content="เครื่องทำนมถั่วอเนกประสงค์ OSTMARS ทำได้ 7 เมนู นมถั่ว น้ำเต้าหู้ โจ๊ก สมูทตี้ ฯลฯ สดใหม่ทำเองที่บ้าน ราคาพิเศษ 1,399 บาท แถม E-book 30 สูตร ส่งฟรี COD ทั่วไทย">
+<meta name="keywords" content="เครื่องทำนมถั่ว,OSTMARS,เครื่องทำน้ำเต้าหู้,เครื่องปั่นนมถั่ว,นมถั่วทำเอง,เครื่องทำโจ๊ก,soy milk maker">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="product">
+<meta property="og:title" content="เครื่องทำนมถั่ว OSTMARS — 1 เครื่อง ทำได้ 7 เมนู">
+<meta property="og:description" content="ทำนมถั่ว น้ำเต้าหู้ โจ๊ก สมูทตี้ สดใหม่ที่บ้าน · ราคาพิเศษ 1,399 บาท แถม E-book 30 สูตร · ส่งฟรีทั่วไทย COD">
+<meta property="og:image" content="./assets/images/01.jpg">
+<meta property="og:site_name" content="OSTMARS Thailand">
+<meta property="og:locale" content="th_TH">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="เครื่องทำนมถั่ว OSTMARS — 1 เครื่อง ทำได้ 7 เมนู">
+<meta name="twitter:description" content="ทำเมนูสุขภาพสดใหม่ที่บ้าน · 1,399 บาท แถม E-book 30 สูตร · ส่งฟรีทั่วไทย">
+<meta name="twitter:image" content="./assets/images/01.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/jpeg" href="./assets/images/01.jpg">
+<link rel="apple-touch-icon" href="./assets/images/01.jpg">
+
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1602655537448756');
+fbq('track','PageView');
+fbq('track','ViewContent',{content_ids:['OSTMARS-NUT-MILK-MAKER'],content_name:'เครื่องทำนมถั่ว OSTMARS',content_type:'product',value:1399,currency:'THB'});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1602655537448756&ev=PageView&noscript=1"/></noscript>
+
+<style>
+:root{
+  --red:#E8001C;--red-dark:#C4000F;--red-light:#FF3B5C;
+  --yellow:#FFB800;--orange:#FF7A00;
+  --bg:#FFFFFF;--bg-soft:#F8F8F8;--bg-border:#F0F0F0;
+  --black:#161823;--text:#161823;--text2:#555;--text3:#8A8B91;--muted:#BBB;
+  --green:#00875A;--green-bg:#E8F8F0;
+  --grad-red:linear-gradient(135deg,#FF3B5C 0%,#E8001C 100%);
+  --grad-yellow:linear-gradient(90deg,#FFB800 0%,#FF7A00 100%);
+  --pastel:#FFE5EC;--mint:#E8F8F0;
+  --r4:4px;--r8:8px;--r12:12px;--r16:16px;--rpill:999px;
+  --shadow-sm:0 1px 2px rgba(22,24,35,.05);
+  --shadow-md:0 2px 8px rgba(22,24,35,.08);
+  --shadow-cta:0 4px 12px rgba(232,0,28,.32);
+  --w:480px;--nav-h:44px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;font-size:14px;line-height:1.5;color:var(--text);background:var(--bg-soft);-webkit-font-smoothing:antialiased;padding-bottom:84px}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+a{color:inherit;text-decoration:none}
+@media(max-width:767px){input,select,textarea{font-size:16px!important}}
+.page{max-width:var(--w);margin:0 auto;background:var(--bg);min-height:100vh;position:relative;overflow-x:hidden}
+@media(min-width:768px){body{padding:24px 0 84px}.page{border-radius:16px;box-shadow:0 8px 32px rgba(22,24,35,.08);overflow:hidden}}
+
+/* ── TAB NAV ── */
+.tabnav{position:sticky;top:0;z-index:50;display:flex;align-items:stretch;background:var(--bg);height:var(--nav-h);border-bottom:1px solid var(--bg-border);box-shadow:0 1px 0 rgba(22,24,35,.04)}
+.tab{flex:1;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:var(--text3);position:relative;cursor:pointer;transition:color .15s;user-select:none;text-decoration:none}
+.tab.active{color:var(--black);font-weight:700}
+.tab.active::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:24px;height:2px;background:var(--red);border-radius:2px 2px 0 0}
+
+/* ── BRAND STRIP ── */
+.brand-strip{display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--bg);border-bottom:1px solid var(--bg-border)}
+.brand-logo{width:32px;height:32px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1.5px solid var(--red)}
+.brand-info{flex:1;min-width:0}
+.brand-row{display:flex;align-items:center;gap:6px}
+.brand-name{font-size:13px;font-weight:700;color:var(--black);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand-badge{padding:2px 7px;background:var(--red);color:#fff;font-size:9px;font-weight:800;letter-spacing:.5px;border-radius:var(--r4);text-transform:uppercase;flex-shrink:0}
+.brand-sub{font-size:10px;color:var(--text3);margin-top:1px}
+.brand-follow{padding:5px 12px;border:1.5px solid var(--red);color:var(--red);font-size:11px;font-weight:700;border-radius:var(--rpill);flex-shrink:0}
+
+/* ── NOTIFICATION BAR ── */
+.notif-bar{background:linear-gradient(90deg,#161823 0%,#2a2d3e 100%);color:#FFD24A;font-size:11px;font-weight:700;text-align:center;padding:7px 16px;letter-spacing:.3px}
+.notif-bar span{color:#fff}
+
+/* ── HERO GALLERY ── */
+.hero{position:relative;width:100%;aspect-ratio:1/1;background:var(--pastel);overflow:hidden}
+.hero-track{display:flex;width:100%;height:100%;scroll-snap-type:x mandatory;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+.hero-track::-webkit-scrollbar{display:none}
+.hero-slide{flex:0 0 100%;width:100%;height:100%;scroll-snap-align:start}
+.hero-img{width:100%;height:100%;object-fit:cover}
+.hero-arrow{position:absolute;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;z-index:3;backdrop-filter:blur(2px)}
+.hero-arrow.prev{left:8px}.hero-arrow.next{right:8px}
+.hero-arrow svg{width:20px;height:20px}
+.hero-counter{position:absolute;bottom:36px;right:12px;padding:3px 10px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;font-weight:600;border-radius:var(--rpill);backdrop-filter:blur(4px);z-index:2}
+.hero-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:2}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.45);transition:all .2s}
+.hero-dot.active{background:#fff;width:14px;border-radius:3px}
+
+/* ── FLASH TAG ── */
+.flash-tag{display:flex;align-items:center;gap:6px;margin:0 16px 12px;padding:8px 12px;background:linear-gradient(90deg,#FFF5E6 0%,#FFE9C2 100%);border:1px solid #FFD898;border-radius:12px;font-size:12px;color:#8A4A00;line-height:1.3}
+.flash-icon{width:16px;height:16px;flex-shrink:0}
+.flash-bold{font-weight:800;color:#C44900}
+.flash-pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red);margin-right:4px;animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.7}}
+
+/* ── DEAL BANNER ── */
+.deal-banner{display:flex;margin:-20px 8px 0;border-radius:var(--r8);overflow:hidden;box-shadow:0 4px 14px rgba(232,0,28,.22);position:relative;z-index:4;min-height:56px}
+.deal-left{flex:0 0 57%;background:linear-gradient(135deg,#FF3B5C 0%,#C4000F 100%);padding:8px 12px;color:#fff;display:flex;flex-direction:column;justify-content:center;gap:2px}
+.deal-price-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.deal-price{font-size:24px;font-weight:900;color:#fff;line-height:1;letter-spacing:-1px}
+.deal-sym{font-size:13px;font-weight:700}
+.deal-pct{display:inline-block;padding:2px 6px;background:rgba(0,0,0,.25);color:#fff;font-size:10px;font-weight:800;border-radius:var(--r4);letter-spacing:.3px}
+.deal-old{font-size:11px;color:rgba(255,255,255,.7);text-decoration:line-through;line-height:1}
+.deal-promo{font-size:11px;font-weight:700;color:#FFE066;line-height:1.3;animation:promo-pulse 2.5s ease-in-out infinite}
+@keyframes promo-pulse{0%,100%{opacity:1}50%{opacity:.45}}
+.deal-right{flex:0 0 43%;background:linear-gradient(180deg,#FFF5DC 0%,#FFE5A0 100%);padding:8px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-left:1px solid rgba(255,200,80,.4)}
+.deal-right-title{font-size:9px;font-weight:800;color:#7A3E00;text-transform:uppercase;letter-spacing:.5px;text-align:center}
+.deal-right-sub{font-size:8px;font-weight:600;color:#A06016}
+.countdown b{display:inline-block;padding:3px 8px;background:#161823;border-radius:4px;font-size:13px;font-weight:900;font-variant-numeric:tabular-nums;letter-spacing:1px;color:#FFD24A;min-width:90px;text-align:center}
+
+/* ── TITLE ── */
+.title-block{padding:14px 16px 4px;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.tag-hot{padding:2px 8px;background:var(--red);color:#fff;font-size:11px;font-weight:800;border-radius:var(--r4);flex-shrink:0}
+.title{font-size:15px;font-weight:700;color:var(--black);line-height:1.45;width:100%}
+
+/* ── META ── */
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:4px 16px 12px;font-size:12px;color:var(--text3)}
+.meta-star{display:inline-flex;align-items:center;gap:3px;font-weight:700;color:var(--text)}
+.meta-star svg{width:14px;height:14px;fill:var(--yellow)}
+.meta-dot{color:var(--muted);font-size:10px}
+.meta-ship{display:inline-flex;align-items:center;gap:3px;color:var(--red);font-weight:600}
+.meta-ship svg{width:14px;height:14px;fill:var(--red)}
+
+/* ── TRUST STRIP ── */
+.trust-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:0 16px 14px;border:1px solid var(--bg-border);border-radius:var(--r8);overflow:hidden;background:var(--bg)}
+.trust-item{display:flex;flex-direction:column;align-items:center;padding:10px 4px;border-right:1px solid var(--bg-border);gap:4px;text-align:center}
+.trust-item:last-child{border-right:0}
+.trust-item svg{width:20px;height:20px;fill:var(--red)}
+.trust-label{font-size:10px;font-weight:700;color:var(--black);line-height:1.3}
+.trust-sub{font-size:9px;color:var(--text3);line-height:1.2}
+
+/* ── INFO ROWS ── */
+.info-rows{margin:0 16px 8px;border:1px solid var(--bg-border);border-radius:var(--r8);overflow:hidden}
+.info-row{display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--bg-border);font-size:12.5px;min-height:38px}
+.info-row:last-child{border-bottom:0}
+.info-label{flex:0 0 88px;font-weight:700;color:var(--black)}
+.info-val{flex:1;display:flex;align-items:center;gap:6px;flex-wrap:wrap;color:var(--text2)}
+.cod-tag{display:inline-block;padding:1px 6px;background:#FFF0F4;color:var(--red);font-size:10px;font-weight:800;border-radius:var(--r4)}
+.ship-old{text-decoration:line-through;color:var(--muted);font-size:12px}
+.ship-free{padding:1px 8px;background:var(--green-bg);color:var(--green);font-size:11px;font-weight:700;border-radius:var(--rpill)}
+
+/* ── INLINE CTA ── */
+.inline-cta{display:flex;gap:10px;padding:4px 16px 14px}
+.ibtn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;font-size:13px;font-weight:800;border-radius:var(--rpill);cursor:pointer;border:none;transition:filter .15s,transform .05s}
+.ibtn svg{width:16px;height:16px;flex-shrink:0}
+.ibtn.chat{flex:.85;background:#fff;border:1.5px solid var(--red);color:var(--red)}
+.ibtn.chat svg{fill:var(--red)}
+.ibtn.buy{flex:1.15;background:var(--grad-red);color:#fff;box-shadow:var(--shadow-cta)}
+.ibtn:active{transform:translateY(1px)}
+
+/* ── SECTION DIV ── */
+.divider{height:8px;background:var(--bg-soft)}
+
+/* ── SECTION HEADER ── */
+.sec-head{text-align:center;padding:24px 16px 0}
+.sec-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;background:linear-gradient(90deg,#FFF0F4 0%,#FFE0E8 100%);border:1px solid #FFD0DC;border-radius:var(--rpill);font-size:10px;font-weight:800;color:var(--red);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.sec-title{font-size:20px;font-weight:800;color:var(--black);line-height:1.35;margin-bottom:6px}
+.sec-title em{font-style:normal;background:linear-gradient(90deg,var(--red),var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sec-sub{font-size:13px;color:var(--text2);line-height:1.6;padding:0 4px;margin-bottom:16px}
+
+/* ── PAIN POINTS ── */
+.pain-wrap{padding:0 16px 24px}
+.pain-img-wrap{overflow:hidden;border-radius:var(--r12);cursor:zoom-in;margin-bottom:16px;box-shadow:var(--shadow-sm)}
+.pain-img-wrap img{width:100%;transition:transform .35s ease}
+.pain-img-wrap:hover img{transform:scale(1.04)}
+.pain-list{display:flex;flex-direction:column;gap:10px}
+.pain-item{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:var(--bg);border-radius:var(--r12);border:1px solid var(--bg-border);box-shadow:var(--shadow-sm)}
+.pain-icon{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#FFE5EC 0%,#FFD0DC 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.pain-body{flex:1;min-width:0}
+.pain-title{font-size:13px;font-weight:700;color:var(--black);margin-bottom:3px}
+.pain-desc{font-size:12px;color:var(--text2);line-height:1.5}
+.pain-cta{text-align:center;margin-top:18px;padding:14px;background:linear-gradient(90deg,#FFF0F4 0%,#FFE0E8 100%);border-radius:var(--r12);border:1px dashed #FFB3C1}
+.pain-cta-text{font-size:14px;font-weight:700;color:var(--red);line-height:1.5}
+
+/* ── HOW IT WORKS ── */
+.hiw-wrap{padding:0 16px 24px}
+.hiw-img-wrap{overflow:hidden;border-radius:var(--r12);cursor:zoom-in;margin-bottom:16px;box-shadow:var(--shadow-sm)}
+.hiw-img-wrap img{width:100%;transition:transform .35s ease}
+.hiw-img-wrap:hover img{transform:scale(1.04)}
+.hiw-cards{display:flex;flex-direction:column;gap:10px}
+.hiw-card{display:flex;gap:14px;align-items:flex-start;padding:14px;background:var(--bg-soft);border-radius:var(--r12);border:1px solid var(--bg-border)}
+.hiw-num{width:44px;height:44px;border-radius:50%;background:var(--grad-red);color:#fff;font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(232,0,28,.3)}
+.hiw-body{flex:1;min-width:0}
+.hiw-name{font-size:14px;font-weight:700;color:var(--black);margin-bottom:3px}
+.hiw-desc{font-size:12px;color:var(--text2);line-height:1.5}
+.hiw-result{font-size:11px;color:var(--red);font-weight:700;margin-top:4px}
+
+/* ── MENU CHIPS (7 modes) ── */
+.menu-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 22px;justify-content:center}
+.menu-chip{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--bg-soft);border:1px solid var(--bg-border);border-radius:var(--rpill);font-size:13px;font-weight:700;color:var(--text)}
+.menu-chip .mc-emoji{font-size:16px;line-height:1}
+
+/* ── FEATURE BENEFITS ── */
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 16px 24px}
+.feat-card{background:var(--bg-soft);border-radius:var(--r12);padding:16px 12px;border:1px solid var(--bg-border);text-align:center}
+.feat-emoji{font-size:28px;margin-bottom:8px}
+.feat-name{font-size:13px;font-weight:700;color:var(--black);margin-bottom:4px}
+.feat-desc{font-size:11px;color:var(--text2);line-height:1.5}
+
+/* ── WHO GRID (target customers 2x2) ── */
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 16px 24px}
+.who-card{border-radius:var(--r12);overflow:hidden;border:1px solid var(--bg-border);background:var(--bg);box-shadow:var(--shadow-sm)}
+.who-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;cursor:zoom-in}
+.who-cap{padding:10px 10px;font-size:12.5px;font-weight:700;color:var(--black);text-align:center;line-height:1.4}
+
+/* ── SERVICE LIST ── */
+.svc-list{display:flex;flex-direction:column;gap:10px;padding:0 16px 8px}
+.svc-item{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--bg-soft);border:1px solid var(--bg-border);border-radius:var(--r12)}
+.svc-ic{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#FFE5EC 0%,#FFD0DC 100%);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.svc-tx{flex:1;min-width:0}
+.svc-tt{font-size:13px;font-weight:700;color:var(--black)}
+.svc-ds{font-size:11.5px;color:var(--text2);margin-top:2px;line-height:1.4}
+
+/* ── BEFORE/AFTER ── */
+.ba-wrap{margin:0 16px 24px;border-radius:var(--r12);overflow:hidden;position:relative;box-shadow:var(--shadow-sm)}
+.ba-wrap img{width:100%;display:block}
+
+/* ── USAGE STEPS ── */
+.step-list{display:flex;flex-direction:column;gap:0;margin:0 16px 24px;border-radius:var(--r12);overflow:hidden;border:1px solid var(--bg-border)}
+.step-item{display:flex;align-items:center;gap:14px;padding:14px;border-bottom:1px solid var(--bg-border);background:var(--bg)}
+.step-item:last-child{border-bottom:0}
+.step-item.hl{background:linear-gradient(90deg,#FFF0F4 0%,#fff 100%)}
+.step-num{width:32px;height:32px;border-radius:50%;background:var(--bg-soft);color:var(--text);font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-item.hl .step-num{background:var(--grad-red);color:#fff}
+.step-body{flex:1}
+.step-name{font-size:14px;font-weight:700;color:var(--text)}
+.step-desc{font-size:12px;color:var(--text3);margin-top:2px}
+
+/* ── GUARANTEE BANNER ── */
+.guarantee{margin:0 16px 24px;padding:16px 14px;background:linear-gradient(90deg,#E8F8F0 0%,#F0FFF7 100%);border-radius:var(--r12);border:1px solid #B2E8D0;display:flex;gap:12px;align-items:flex-start}
+.guarantee svg{width:32px;height:32px;fill:var(--green);flex-shrink:0;margin-top:2px}
+.guarantee-body{flex:1}
+.guarantee-title{font-size:15px;font-weight:800;color:#005A38;margin-bottom:4px}
+.guarantee-desc{font-size:12px;color:#2E7D32;line-height:1.5}
+
+/* ── STATS ── */
+.stats-band{background:var(--grad-red);padding:28px 16px;color:#fff}
+.stats-headline{font-size:13px;font-weight:700;text-align:center;text-transform:uppercase;letter-spacing:1.5px;opacity:.9;margin-bottom:18px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stat{text-align:center;padding:0 4px}
+.stat+.stat{border-left:1px solid rgba(255,255,255,.2)}
+.stat-num{font-size:22px;font-weight:900;line-height:1;letter-spacing:-1px}
+.stat-num span{font-size:12px;font-weight:700}
+.stat-label{font-size:10px;margin-top:5px;opacity:.9;line-height:1.4}
+
+/* ── REVIEW SECTION ── */
+.rev-section{padding:24px 16px}
+.rev-header{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.rev-score-big{font-size:48px;font-weight:900;color:var(--red);line-height:1}
+.rev-score-info{display:flex;flex-direction:column;gap:2px}
+.rev-stars-lg{color:var(--yellow);font-size:18px;letter-spacing:2px}
+.rev-count{font-size:12px;color:var(--text3)}
+.rev-bar-wrap{margin-bottom:16px}
+.rev-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.rev-bar-lbl{font-size:11px;color:var(--text3);flex:0 0 28px;text-align:right}
+.rev-bar-track{flex:1;height:5px;background:var(--bg-border);border-radius:3px;overflow:hidden}
+.rev-bar-fill{height:100%;background:var(--yellow);border-radius:3px}
+.rev-bar-pct{font-size:11px;color:var(--text3);flex:0 0 28px}
+.rev-proof-img{width:100%;border-radius:var(--r12);overflow:hidden;margin-bottom:16px;box-shadow:var(--shadow-sm);cursor:zoom-in}
+.rev-proof-img img{width:100%;display:block}
+.rev-list{display:flex;flex-direction:column;gap:12px}
+.rev-card{padding:14px;background:var(--bg-soft);border-radius:var(--r12);border:1px solid var(--bg-border)}
+.rev-top{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.rev-avatar{width:38px;height:38px;border-radius:50%;background:var(--pastel);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--red);font-size:15px}
+.rev-meta{flex:1;min-width:0}
+.rev-name{font-size:13px;font-weight:700;color:var(--text);line-height:1.2}
+.rev-option{font-size:11px;color:var(--text3)}
+.rev-stars-sm{font-size:12px;color:var(--yellow);letter-spacing:1px}
+.rev-text{font-size:13px;color:var(--text);line-height:1.6;margin-bottom:8px}
+.rev-date{font-size:11px;color:var(--text3)}
+
+/* ── PROMO CTA ── */
+.promo-block{padding:24px 16px}
+.promo-img-wrap{border-radius:var(--r12);overflow:hidden;margin-bottom:18px;box-shadow:var(--shadow-sm);cursor:zoom-in}
+.promo-img-wrap img{width:100%;display:block}
+.promo-options{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.promo-opt{display:flex;align-items:center;padding:14px;border-radius:var(--r12);border:2px solid var(--bg-border);background:var(--bg-soft);cursor:pointer;transition:all .15s;position:relative}
+.promo-opt.pop{border-color:var(--red);background:linear-gradient(135deg,#FFF0F4 0%,#fff 100%)}
+.promo-opt-left{display:flex;align-items:center;gap:10px;flex:1}
+.promo-opt-emoji{font-size:22px}
+.promo-opt-info .promo-opt-title{font-size:14px;font-weight:700;color:var(--black)}
+.promo-opt-info .promo-opt-sub{font-size:11px;color:var(--text3);margin-top:2px}
+.promo-opt-price{font-size:20px;font-weight:900;color:var(--red);flex-shrink:0;margin-left:10px}
+.promo-badge-pin{position:absolute;top:-10px;right:14px;padding:3px 10px;background:var(--red);color:#fff;font-size:10px;font-weight:800;border-radius:var(--rpill);letter-spacing:.3px}
+.promo-cta-btn{width:100%;padding:16px;background:var(--grad-red);color:#fff;font-size:16px;font-weight:800;border-radius:var(--rpill);border:none;cursor:pointer;box-shadow:var(--shadow-cta);display:flex;align-items:center;justify-content:center;gap:8px;letter-spacing:.3px}
+.promo-cta-btn svg{width:20px;height:20px;fill:#fff}
+.promo-cta-note{text-align:center;font-size:11px;color:var(--text3);margin-top:10px}
+
+/* ── FAQ ── */
+.faq-wrap{padding:0 16px 24px}
+.faq-item{background:var(--bg-soft);border-radius:var(--r8);overflow:hidden;border:1px solid transparent;margin-bottom:8px}
+.faq-item[open]{background:var(--bg);border-color:#FFD0DC}
+.faq-q{padding:14px 16px;font-size:14px;font-weight:600;color:var(--text);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.faq-q::-webkit-details-marker{display:none}
+.faq-q::after{content:'+';font-size:22px;font-weight:700;color:var(--red);transition:transform .2s;flex-shrink:0}
+.faq-item[open] .faq-q::after{transform:rotate(45deg)}
+.faq-a{padding:0 16px 14px;font-size:13px;color:var(--text2);line-height:1.65}
+.faq-a b{color:var(--red)}
+
+/* ── BRAND FOOTER ── */
+.brand-foot{padding:24px 16px;text-align:center;background:linear-gradient(180deg,#FFF5F8 0%,#fff 100%);border-top:1px dashed #FFD0DC}
+.brand-foot-logo{font-size:20px;font-weight:900;color:var(--red);letter-spacing:.5px;margin-bottom:4px}
+.brand-foot-sub{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+.brand-foot-certs{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.brand-cert{display:inline-flex;align-items:center;gap:4px;padding:5px 10px;background:#fff;border:1px solid var(--bg-border);border-radius:var(--rpill);font-size:11px;font-weight:600;color:var(--text2)}
+.brand-cert svg{width:12px;height:12px;fill:var(--red)}
+.legal{font-size:10.5px;color:var(--text3);line-height:1.6;border-top:1px solid var(--bg-border);padding-top:12px;margin-top:4px}
+
+/* ── STICKY CTA ── */
+.sticky-cta{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:var(--w);z-index:40;background:var(--bg);border-top:1px solid var(--bg-border);padding:10px 16px;display:flex;gap:14px;align-items:center;box-shadow:0 -4px 16px rgba(22,24,35,.1);box-sizing:border-box}
+@media(min-width:768px){.sticky-cta{border-radius:0 0 16px 16px}}
+.sticky-side{display:flex;gap:14px;padding-right:10px;border-right:1px solid var(--bg-border)}
+.sticky-btn-side{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:40px;cursor:pointer;color:var(--text2);font-size:10px;font-weight:500;text-decoration:none;transition:color .15s}
+.sticky-btn-side:hover{color:var(--red)}
+.sticky-btn-side svg{width:22px;height:22px;fill:var(--text2);transition:fill .15s}
+.sticky-btn-side:hover svg{fill:var(--red)}
+.sticky-actions{flex:1;display:flex;gap:10px}
+.btn-cart{flex:1;padding:12px 10px;background:#fff;border:1.5px solid var(--red);color:var(--red);font-size:13px;font-weight:700;border-radius:var(--rpill);cursor:pointer;white-space:nowrap}
+.btn-buy{flex:1.3;padding:12px 14px;background:var(--grad-red);color:#fff;font-size:14px;font-weight:800;border-radius:var(--rpill);cursor:pointer;box-shadow:var(--shadow-cta);border:none;white-space:nowrap}
+
+/* ── POPUP ── */
+.popup-overlay{position:fixed;inset:0;background:rgba(22,24,35,.55);z-index:100;display:none;align-items:flex-end;justify-content:center;opacity:0;transition:opacity .25s ease}
+.popup-overlay.open{display:flex;opacity:1}
+.popup{width:100%;max-width:480px;max-height:92vh;background:var(--bg);border-radius:16px 16px 0 0;display:flex;flex-direction:column;transform:translateY(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+.popup-overlay.open .popup{transform:translateY(0)}
+@media(min-width:768px){.popup-overlay{align-items:center}.popup{border-radius:16px;max-height:82vh}}
+.popup-drag{width:36px;height:4px;background:var(--bg-border);border-radius:2px;margin:10px auto 0;flex-shrink:0}
+.popup-hd{display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid var(--bg-border)}
+.popup-product-img{width:80px;height:80px;border-radius:var(--r8);object-fit:cover;flex-shrink:0;background:var(--bg-soft)}
+.popup-product-info{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center}
+.popup-product-name{font-size:12px;color:var(--text2);margin-bottom:4px;line-height:1.4}
+.popup-price{font-size:24px;font-weight:900;color:var(--red);line-height:1}
+.popup-price-old{font-size:11px;color:var(--muted);text-decoration:line-through;margin-top:2px}
+.popup-close{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.06);border:none;cursor:pointer;z-index:1}
+.popup-close svg{width:16px;height:16px;fill:var(--text3)}
+.popup-body{flex:1;overflow-y:auto;padding:16px}
+.popup-sec{margin-bottom:16px}
+.popup-label{font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px;display:flex;align-items:baseline;gap:4px}
+.req{color:var(--red)}
+.popup-opts{display:flex;flex-direction:column;gap:8px}
+.popup-opt{padding:12px 14px;background:var(--bg-soft);border:1.5px solid transparent;border-radius:var(--r8);font-size:13px;cursor:pointer;color:var(--text);text-align:left;width:100%;position:relative;transition:all .15s}
+.popup-opt.sel{background:#FFF0F4;border-color:var(--red);color:var(--red);font-weight:600}
+.color-dot{display:inline-block;width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.15);flex-shrink:0}
+@keyframes blink{0%,100%{opacity:1;transform:translateY(-50%) scale(1)}50%{opacity:.7;transform:translateY(-50%) scale(.96)}}
+.opt-badge{position:absolute;top:50%;right:8px;transform:translateY(-50%);padding:2px 8px;background:var(--red);color:#fff;font-size:10px;font-weight:800;border-radius:var(--rpill);animation:blink 1.2s ease-in-out infinite;pointer-events:none}
+.popup-input,.popup-textarea{width:100%;padding:10px 12px;border:1.5px solid var(--bg-border);border-radius:var(--r8);font-size:14px;font-family:inherit;color:var(--text);background:var(--bg);outline:none;transition:border-color .15s}
+.popup-input:focus,.popup-textarea:focus{border-color:var(--red)}
+.popup-input.err,.popup-textarea.err{border-color:var(--red)}
+.popup-textarea{resize:vertical;min-height:60px}
+.err-msg{font-size:12px;color:var(--red);margin-top:4px;display:none}
+.honeypot{position:absolute;left:-9999px;opacity:0;pointer-events:none}
+.popup-foot{padding:12px 16px;border-top:1px solid var(--bg-border);background:var(--bg)}
+.popup-total{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.popup-total-lbl{font-size:12px;color:var(--text3)}
+.popup-total-val{font-size:22px;font-weight:900;color:var(--red)}
+.popup-submit{width:100%;padding:15px;background:var(--grad-red);color:#fff;font-size:15px;font-weight:800;border-radius:var(--rpill);cursor:pointer;border:none;box-shadow:var(--shadow-cta);letter-spacing:.3px}
+.popup-submit:disabled{background:var(--bg-soft);color:var(--muted);cursor:not-allowed;box-shadow:none}
+.popup-success{padding:36px 16px;text-align:center;display:none}
+.success-icon{width:68px;height:68px;border-radius:50%;background:var(--green-bg);color:var(--green);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:36px}
+.success-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:8px}
+.success-msg{font-size:13px;color:var(--text3);line-height:1.6;margin-bottom:16px}
+.order-code{display:inline-block;padding:8px 18px;background:var(--bg-soft);border-radius:var(--r8);font-family:monospace;font-size:15px;font-weight:700;color:var(--red);letter-spacing:1.5px}
+
+/* ── LIGHTBOX ── */
+#lb{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.9);padding:20px;align-items:center;justify-content:center;cursor:zoom-out}
+#lb.open{display:flex}
+#lb-img{max-width:100%;max-height:90vh;object-fit:contain;border-radius:10px;pointer-events:none}
+#lb-close{position:absolute;top:14px;right:14px;width:36px;height:36px;background:rgba(255,255,255,.15);border-radius:50%;border:none;color:#fff;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ─────────── TAB NAV ─────────── -->
+<nav class="tabnav">
+  <a class="tab active" href="#overview">ภาพรวม</a>
+  <a class="tab" href="#details">รายละเอียด</a>
+  <a class="tab" href="#reviews">รีวิว</a>
+  <a class="tab" href="#promo">โปรโมชั่น</a>
+</nav>
+
+<section id="overview">
+
+  <!-- BRAND STRIP -->
+  <div class="brand-strip">
+    <img class="brand-logo" src="./assets/images/logo.jpg" alt="OSTMARS">
+    <div class="brand-info">
+      <div class="brand-row">
+        <span class="brand-name">OSTMARS Thailand</span>
+        <svg width="14" height="14" viewBox="0 0 24 24"><path fill="#E8001C" d="M12 2l2.39 2.21 3.18-.42 1.31 2.94 2.94 1.31-.42 3.18L23.5 12l-2.1 2.39.42 3.18-2.94 1.31-1.31 2.94-3.18-.42L12 22l-2.39-2.1-3.18.42-1.31-2.94L2.18 16.07l.42-3.18L.5 12l2.1-2.39-.42-3.18 2.94-1.31L6.43 2.18l3.18.42L12 2z"/><path fill="#fff" d="M9.5 16.2L5.3 12l1.4-1.4 2.8 2.8 7.8-7.8 1.4 1.4z"/></svg>
+        <span class="brand-badge">Official</span>
+      </div>
+      <div class="brand-sub">🥛 เครื่องทำนมถั่วเพื่อสุขภาพ · ทำเมนูสดใหม่ที่บ้าน</div>
+    </div>
+    <button class="brand-follow">+ ติดตาม</button>
+  </div>
+
+  <!-- HERO GALLERY -->
+  <div class="hero">
+    <div class="hero-track" id="heroTrack">
+      <div class="hero-slide"><img class="hero-img" src="./assets/images/01.jpg" alt="เครื่องทำนมถั่ว OSTMARS" loading="eager"></div>
+      <div class="hero-slide"><img class="hero-img" src="./assets/images/02.jpg" alt="1 เครื่อง ทำได้ 7 เมนู" loading="lazy"></div>
+      <div class="hero-slide"><img class="hero-img" src="./assets/images/03.jpg" alt="ทำเองที่บ้าน ง่ายกว่าที่คิด" loading="lazy"></div>
+      <div class="hero-slide"><img class="hero-img" src="./assets/images/09.jpg" alt="นมถั่วเนียนนุ่ม ดื่มง่าย" loading="lazy"></div>
+      <div class="hero-slide"><img class="hero-img" src="./assets/images/05.jpg" alt="ทำง่ายแค่ 3 ขั้นตอน" loading="lazy"></div>
+      <div class="hero-slide"><img class="hero-img" src="./assets/images/20.jpg" alt="โปรพิเศษวันนี้" loading="lazy"></div>
+    </div>
+    <button class="hero-arrow prev" aria-label="ก่อนหน้า"><svg viewBox="0 0 24 24"><path fill="#fff" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></button>
+    <button class="hero-arrow next" aria-label="ถัดไป"><svg viewBox="0 0 24 24"><path fill="#fff" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></button>
+    <div class="hero-counter">1 / 6</div>
+    <div class="hero-dots">
+      <div class="hero-dot active"></div><div class="hero-dot"></div><div class="hero-dot"></div>
+      <div class="hero-dot"></div><div class="hero-dot"></div><div class="hero-dot"></div>
+    </div>
+  </div>
+
+  <!-- DEAL BANNER -->
+  <div class="deal-banner">
+    <div class="deal-left">
+      <div class="deal-price-row">
+        <span class="deal-price">1,399<span class="deal-sym"> ฿</span></span>
+        <span class="deal-old">1,999 ฿</span>
+        <span class="deal-pct">-30%</span>
+      </div>
+      <span class="deal-promo">🎁 แถม E-book 30 สูตร + ส่งฟรีทั่วไทย!</span>
+    </div>
+    <div class="deal-right">
+      <div class="deal-right-title">โปรสิ้นสุดใน · <span style="color:#A06016;font-weight:600;text-transform:none;letter-spacing:0">อย่าพลาด!</span></div>
+      <div class="countdown" data-end="86400"><b>23:59:59</b></div>
+    </div>
+  </div>
+
+  <!-- TITLE -->
+  <div class="title-block">
+    <span class="tag-hot">FLASH DEAL</span>
+    <h1 class="title">เครื่องทำนมถั่ว OSTMARS อเนกประสงค์ — ทำนมถั่ว น้ำเต้าหู้ โจ๊ก สมูทตี้ ได้ในเครื่องเดียว</h1>
+  </div>
+
+  <!-- META -->
+  <div class="meta">
+    <span class="meta-star">
+      <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      4.9/5
+    </span>
+    <span style="font-size:12px;color:var(--text3)">(1,128 รีวิว)</span>
+    <span class="meta-dot">|</span>
+    <span style="font-size:12px">ขายแล้ว <b>5,000+</b></span>
+    <span class="meta-dot">|</span>
+    <span class="meta-ship">
+      <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3a2 2 0 0 0-2 2v11h2a3 3 0 0 0 6 0h6a3 3 0 0 0 6 0h2v-5l-3-4zM6 18.5A1.5 1.5 0 1 1 7.5 17 1.5 1.5 0 0 1 6 18.5zm12 0A1.5 1.5 0 1 1 19.5 17 1.5 1.5 0 0 1 18 18.5zM17 12V9.5h2.5L21.46 12H17z"/></svg>
+      ส่งฟรีทั่วไทย
+    </span>
+  </div>
+
+  <!-- FLASH SALE TAG -->
+  <div class="flash-tag">
+    <svg class="flash-icon" viewBox="0 0 24 24"><path fill="#C44900" d="M19 5h-2V3H7v2H5a2 2 0 0 0-2 2v2c0 2.21 1.79 4 4 4 .14 0 .27-.02.4-.05A6.01 6.01 0 0 0 11 14.92V17H8v2h8v-2h-3v-2.08a6.01 6.01 0 0 0 3.6-3.97c.13.03.26.05.4.05 2.21 0 4-1.79 4-4V7a2 2 0 0 0-2-2z"/></svg>
+    <span style="flex:1"><span class="flash-bold">ขายดีหมวดเครื่องใช้ไฟฟ้าสุขภาพ</span> · แถมฟรี E-book 30 สูตร · ส่งฟรีทั่วไทยเดือนนี้เท่านั้น!</span>
+    <svg style="width:14px;height:14px;flex-shrink:0;fill:#8A4A00" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6V6z"/></svg>
+  </div>
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      <div class="trust-label">ปลอดภัย</div>
+      <div class="trust-sub">ตัดไฟอัตโนมัติ</div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      <div class="trust-label">รับประกัน</div>
+      <div class="trust-sub">1 ปีเต็ม</div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3a2 2 0 0 0-2 2v11h2a3 3 0 0 0 6 0h6a3 3 0 0 0 6 0h2v-5l-3-4zM6 18.5A1.5 1.5 0 1 1 7.5 17 1.5 1.5 0 0 1 6 18.5zm12 0A1.5 1.5 0 1 1 19.5 17 1.5 1.5 0 0 1 18 18.5z"/></svg>
+      <div class="trust-label">เก็บปลายทาง</div>
+      <div class="trust-sub">COD ทั่วไทย</div>
+    </div>
+  </div>
+
+  <!-- INFO ROWS -->
+  <div class="info-rows">
+    <div class="info-row">
+      <div class="info-label">ชำระเงิน</div>
+      <div class="info-val"><span class="cod-tag">COD</span> ชำระเงินปลายทาง — ตรวจสินค้าก่อนจ่าย</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">ของแถม</div>
+      <div class="info-val">🎁 E-book 30 สูตรทำนมถั่ว <span class="ship-free">ฟรี!</span></div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">ค่าจัดส่ง</div>
+      <div class="info-val"><span class="ship-old">50 บาท</span><span class="ship-free">ฟรี! เดือนนี้เท่านั้น</span></div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">จัดส่ง</div>
+      <div class="info-val">ด่วนภายใน 2–3 วันทำการ ทั่วประเทศไทย</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">รับประกัน</div>
+      <div class="info-val">1 ปีเต็ม · มีบริการหลังการขาย</div>
+    </div>
+  </div>
+
+  <!-- INLINE CTA -->
+  <div class="inline-cta">
+    <a class="ibtn chat" href="https://m.me/61591016493564" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+      แชทเลย
+    </a>
+    <button class="ibtn buy" onclick="openPopup()">
+      <svg viewBox="0 0 24 24"><path fill="#fff" d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51C12.96 17.55 11 21 11 21z"/></svg>
+      สั่งซื้อเลย · เริ่ม 1,399 ฿
+    </button>
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- ─────────── รายละเอียด ─────────── -->
+<section id="details">
+
+  <!-- PAIN POINTS -->
+  <div class="sec-head">
+    <div class="sec-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+      คุณเจอปัญหาแบบนี้อยู่ไหม?
+    </div>
+    <h2 class="sec-title">ซื้อเครื่องดื่มสุขภาพทุกวัน<br><em>แพงไปไหม?</em></h2>
+    <p class="sec-sub">ลองเปลี่ยนมาทำเองที่บ้าน — สดใหม่กว่า คุมวัตถุดิบได้ และคุ้มกว่าในระยะยาว</p>
+  </div>
+  <div class="pain-wrap">
+    <div class="pain-img-wrap" onclick="openLb(this)">
+      <img src="./assets/images/03.jpg" alt="ปัญหาการซื้อเครื่องดื่มสุขภาพทุกวัน" loading="lazy">
+    </div>
+    <div class="pain-list">
+      <div class="pain-item">
+        <div class="pain-icon">❓</div>
+        <div class="pain-body">
+          <div class="pain-title">ไม่รู้ส่วนผสมที่แท้จริง</div>
+          <div class="pain-desc">นมถั่วหรือเครื่องดื่มสำเร็จรูปมักมีสารปรุงแต่ง สารกันบูด ที่เราไม่สามารถเลือกหรือควบคุมได้เอง</div>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">🍬</div>
+        <div class="pain-body">
+          <div class="pain-title">หวานเกินไป กินแล้วไม่สบายใจ</div>
+          <div class="pain-desc">เครื่องดื่มขายทั่วไปมักเติมน้ำตาลเยอะ ดื่มทุกวันสะสมแคลอรี่ ไม่เหมาะกับคนรักสุขภาพ</div>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">💸</div>
+        <div class="pain-body">
+          <div class="pain-title">ซื้อทุกวันเปลืองเงิน</div>
+          <div class="pain-desc">แก้วละ 25–60 บาท ซื้อทุกวันรวมเป็นเดือนหลายพันบาท เสียเงินซ้ำๆ โดยไม่รู้ตัว</div>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">⏰</div>
+        <div class="pain-body">
+          <div class="pain-title">เช้าเร่งรีบ ไม่มีเวลา</div>
+          <div class="pain-desc">อยากกินของสดใหม่แต่ไม่มีเวลาเตรียม สุดท้ายก็ต้องซื้อนอกบ้านหรืออดมื้อเช้าไป</div>
+        </div>
+      </div>
+    </div>
+    <div class="pain-cta">
+      <div class="pain-cta-text">🥛 OSTMARS ช่วยให้คุณทำเมนูสุขภาพเองได้ทุกวัน<br><span style="font-size:12px;font-weight:500;color:var(--text2)">คุมหวานเอง เลือกวัตถุดิบเอง สดใหม่ทุกแก้ว</span></div>
+    </div>
+  </div>
+
+  <!-- SOLUTION: ซื้อ vs ทำเอง -->
+  <div style="background:var(--bg-soft);padding-bottom:24px">
+    <div class="sec-head">
+      <div class="sec-badge">✅ ทางออก</div>
+      <h2 class="sec-title">ทำเองที่บ้าน <em>ดีกว่าซื้อทุกวัน</em><br>ยังไง?</h2>
+      <p class="sec-sub">เปรียบเทียบให้เห็นชัด — จากซื้อทุกวัน เป็นทำเองได้ที่บ้าน สดใหม่กว่า คุมหวานได้</p>
+    </div>
+    <div class="hiw-wrap" style="padding-bottom:8px">
+      <div class="hiw-img-wrap" onclick="openLb(this)">
+        <img src="./assets/images/04.jpg" alt="เปรียบเทียบ ซื้อข้างนอก กับ ทำเองที่บ้าน" loading="lazy">
+      </div>
+      <div class="ba-wrap" style="margin:0">
+        <img src="./assets/images/17.jpg" alt="เปลี่ยนมื้อเช้าให้สดใหม่ทุกวัน" loading="lazy" onclick="openLb(this.parentNode)" style="cursor:zoom-in">
+      </div>
+    </div>
+  </div>
+
+  <!-- 1 เครื่อง ทำได้ 7 เมนู -->
+  <div class="sec-head">
+    <div class="sec-badge">🍶 1 เครื่อง คุ้มหลายเมนู</div>
+    <h2 class="sec-title">เครื่องเดียว <em>ทำได้ 7 เมนู</em><br>เมนูสุขภาพสำหรับทุกวัน</h2>
+    <p class="sec-sub">ไม่ใช่แค่นมถั่ว — OSTMARS ทำได้หลากหลายเมนูในเครื่องเดียว ครบทุกความต้องการของบ้านคุณ</p>
+  </div>
+  <div class="hiw-img-wrap" style="margin:0 16px 16px;cursor:zoom-in" onclick="openLb(this)">
+    <img src="./assets/images/02.jpg" alt="1 เครื่อง ทำได้ 7 เมนู" loading="lazy">
+  </div>
+  <div class="menu-chips">
+    <span class="menu-chip"><span class="mc-emoji">🫘</span>นมถั่ว</span>
+    <span class="menu-chip"><span class="mc-emoji">🥛</span>น้ำเต้าหู้</span>
+    <span class="menu-chip"><span class="mc-emoji">🍚</span>โจ๊ก</span>
+    <span class="menu-chip"><span class="mc-emoji">🥤</span>สมูทตี้</span>
+    <span class="menu-chip"><span class="mc-emoji">🍵</span>ชา</span>
+    <span class="menu-chip"><span class="mc-emoji">🌽</span>นมข้าวโพด</span>
+    <span class="menu-chip"><span class="mc-emoji">🌾</span>ธัญพืชอุ่น</span>
+  </div>
+  <div class="hiw-img-wrap" style="margin:0 16px 24px;cursor:zoom-in" onclick="openLb(this)">
+    <img src="./assets/images/16.jpg" alt="มื้อเช้าเฮลตี้ ครบทุกวัน" loading="lazy">
+  </div>
+
+  <!-- FEATURE BENEFITS GRID -->
+  <div class="sec-head" style="padding-bottom:14px">
+    <h2 class="sec-title" style="font-size:18px">สิ่งที่คุณได้รับ<em> จาก OSTMARS</em></h2>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card">
+      <div class="feat-emoji">🍶</div>
+      <div class="feat-name">ทำได้ 7 เมนู</div>
+      <div class="feat-desc">นมถั่ว น้ำเต้าหู้ โจ๊ก สมูทตี้ ชา ฯลฯ ในเครื่องเดียว</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-emoji">🌿</div>
+      <div class="feat-name">สดใหม่ทุกวัน</div>
+      <div class="feat-desc">ปั่นสดดื่มทันที ไม่ใส่สารกันเสีย ดีต่อสุขภาพ</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-emoji">🍯</div>
+      <div class="feat-name">คุมหวานเอง</div>
+      <div class="feat-desc">เลือกวัตถุดิบและความหวานได้ตามใจชอบ</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-emoji">💰</div>
+      <div class="feat-name">คุ้มในระยะยาว</div>
+      <div class="feat-desc">ลงทุนครั้งเดียว ใช้ได้ทุกวัน ประหยัดกว่าซื้อนอก</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-emoji">👆</div>
+      <div class="feat-name">ใช้ง่าย 3 ขั้นตอน</div>
+      <div class="feat-desc">ใส่วัตถุดิบ เติมน้ำ กดปุ่ม เมนูอัตโนมัติ</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-emoji">✨</div>
+      <div class="feat-name">ทำความสะอาดง่าย</div>
+      <div class="feat-desc">โถถอดล้างสะดวก หมดกังวลเรื่องความสะอาด</div>
+    </div>
+  </div>
+
+  <!-- PRODUCT DETAIL -->
+  <div style="background:var(--bg-soft);padding-bottom:24px">
+    <div class="sec-head">
+      <div class="sec-badge">🔍 รายละเอียดสินค้า</div>
+      <h2 class="sec-title">รายละเอียด<em> OSTMARS</em><br>ดีไซน์สวย ใช้งานง่าย</h2>
+      <p class="sec-sub">ออกแบบมินิมอล โถใสเห็นชัด ควบคุมง่ายด้วยระบบสัมผัส เหมาะกับครัวสุขภาพทุกบ้าน</p>
+    </div>
+    <div class="hiw-wrap" style="padding-bottom:0">
+      <div class="hiw-img-wrap" onclick="openLb(this)">
+        <img src="./assets/images/06.jpg" alt="รายละเอียดผลิตภัณฑ์ OSTMARS" loading="lazy">
+      </div>
+      <div class="feat-grid" style="padding:0 0 16px">
+        <div class="feat-card" style="background:var(--bg)" onclick="openLb(this.querySelector('a')||this)">
+          <div class="hiw-img-wrap" style="margin:0;box-shadow:none" onclick="openLb(this)">
+            <img src="./assets/images/07.jpg" alt="หลายโหมดในเครื่องเดียว" loading="lazy">
+          </div>
+          <div class="feat-name" style="margin-top:8px">หลายโหมดในเครื่องเดียว</div>
+          <div class="feat-desc">เลือกเมนูที่ต้องการ แล้วปล่อยให้เครื่องจัดการ</div>
+        </div>
+        <div class="feat-card" style="background:var(--bg)">
+          <div class="hiw-img-wrap" style="margin:0;box-shadow:none" onclick="openLb(this)">
+            <img src="./assets/images/08.jpg" alt="ความจุพอดีสำหรับครอบครัว" loading="lazy">
+          </div>
+          <div class="feat-name" style="margin-top:8px">ความจุ 1.0L พอดีทุกวัน</div>
+          <div class="feat-desc">เหมาะกับคนเดียว คู่รัก หรือครอบครัวเล็ก</div>
+        </div>
+      </div>
+    </div>
+    <!-- SPEC TABLE -->
+    <div class="info-rows" style="margin-bottom:0">
+      <div class="info-row"><div class="info-label">รุ่น</div><div class="info-val">OSTMARS PBJ-003 · 220V</div></div>
+      <div class="info-row"><div class="info-label">กำลังไฟ</div><div class="info-val">600W</div></div>
+      <div class="info-row"><div class="info-label">ความจุ</div><div class="info-val">800–1000ml (1.0L)</div></div>
+      <div class="info-row"><div class="info-label">ความเร็วใบมีด</div><div class="info-val">23,000 รอบ/นาที</div></div>
+      <div class="info-row"><div class="info-label">ใบมีด</div><div class="info-val">สแตนเลส 304 · 8 ด้าน 360°</div></div>
+      <div class="info-row"><div class="info-label">การควบคุม</div><div class="info-val">ระบบสัมผัส + ไฟแสดงสถานะ</div></div>
+      <div class="info-row"><div class="info-label">โหมด</div><div class="info-val">7 เมนูอัตโนมัติ + อุ่นร้อน</div></div>
+    </div>
+  </div>
+
+  <!-- RESULT -->
+  <div class="sec-head" style="padding-bottom:14px">
+    <h2 class="sec-title" style="font-size:18px">เนียนนุ่ม<em> ดื่มง่าย</em></h2>
+    <p class="sec-sub">ปั่นละเอียด สดใหม่ — เหมาะกับนมถั่ว นมข้าวโพด โจ๊ก และเมนูอุ่นๆ</p>
+  </div>
+  <div class="hiw-img-wrap" style="margin:0 16px 24px;cursor:zoom-in" onclick="openLb(this)">
+    <img src="./assets/images/09.jpg" alt="นมถั่วเนียนนุ่ม ดื่มง่าย" loading="lazy">
+  </div>
+
+  <!-- HOW TO USE -->
+  <div class="sec-head">
+    <h2 class="sec-title" style="font-size:18px">ทำง่าย<em> แค่ 3 ขั้นตอน</em></h2>
+    <p class="sec-sub">ใส่วัตถุดิบ เติมน้ำ กดปุ่ม — มือใหม่ก็ใช้ได้ง่าย</p>
+  </div>
+  <div class="hiw-img-wrap" style="margin:0 16px 16px;cursor:zoom-in" onclick="openLb(this)">
+    <img src="./assets/images/05.jpg" alt="วิธีใช้งาน 3 ขั้นตอน" loading="lazy">
+  </div>
+  <div class="step-list">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <div class="step-name">ใส่ถั่วหรือธัญพืช</div>
+        <div class="step-desc">เลือกวัตถุดิบที่ชอบ เช่น ถั่วเหลือง อัลมอนด์ ข้าวโพด ธัญพืช</div>
+      </div>
+    </div>
+    <div class="step-item hl">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <div class="step-name">เติมน้ำตามระดับ</div>
+        <div class="step-desc">มีขีดบอกระดับน้ำชัดเจน ไม่ล้น ไม่พลาด</div>
+      </div>
+    </div>
+    <div class="step-item hl">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <div class="step-name">เลือกโหมด แล้วรอพร้อมดื่ม</div>
+        <div class="step-desc">กดเมนูที่ต้องการ เครื่องทำงานอัตโนมัติจนเสร็จ</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAFETY -->
+  <div style="background:var(--bg-soft);padding-bottom:24px">
+    <div class="sec-head">
+      <div class="sec-badge">🛡️ ใช้งานอุ่นใจ</div>
+      <h2 class="sec-title">ใช้งานอุ่นใจ<em> ทุกครั้ง</em></h2>
+      <p class="sec-sub">ออกแบบมาเพื่อการใช้งานในบ้านที่สะดวกและมั่นใจ พร้อมระบบความปลอดภัยหลายชั้น</p>
+    </div>
+    <div class="hiw-wrap" style="padding-bottom:8px">
+      <div class="hiw-img-wrap" onclick="openLb(this)">
+        <img src="./assets/images/10.jpg" alt="ระบบความปลอดภัยของเครื่อง OSTMARS" loading="lazy">
+      </div>
+      <div class="feat-grid" style="padding:0">
+        <div class="feat-card" style="background:var(--bg)"><div class="feat-emoji">🔒</div><div class="feat-name">ฝาปิดแน่น</div><div class="feat-desc">มีเซ็นเซอร์ตรวจจับฝาก่อนเริ่มทำงาน</div></div>
+        <div class="feat-card" style="background:var(--bg)"><div class="feat-emoji">⚡</div><div class="feat-name">ตัดไฟอัตโนมัติ</div><div class="feat-desc">ตัดไฟเมื่อทำงานเสร็จหรือเมื่อร้อนเกิน</div></div>
+        <div class="feat-card" style="background:var(--bg)"><div class="feat-emoji">♨️</div><div class="feat-name">ลดแรงดันอัตโนมัติ</div><div class="feat-desc">ป้องกันการล้นขณะต้มเมนูร้อน</div></div>
+        <div class="feat-card" style="background:var(--bg)"><div class="feat-emoji">💧</div><div class="feat-name">ป้องกันมอเตอร์</div><div class="feat-desc">ออกแบบป้องกันน้ำเข้ามอเตอร์ ใช้ทนนาน</div></div>
+      </div>
+      <p style="text-align:center;font-size:11px;color:var(--text3);margin-top:4px">* ควรใช้งานตามคำแนะนำในคู่มือ</p>
+    </div>
+  </div>
+
+  <!-- WHO IS IT FOR -->
+  <div class="sec-head">
+    <div class="sec-badge">👨‍👩‍👧 เหมาะกับทุกบ้าน</div>
+    <h2 class="sec-title">เหมาะกับ<em>ใครบ้าง?</em></h2>
+    <p class="sec-sub">ไม่ว่าจะอยู่คนเดียว คู่รัก หรือทั้งครอบครัว OSTMARS ก็ตอบโจทย์ทุกไลฟ์สไตล์</p>
+  </div>
+  <div class="who-grid">
+    <div class="who-card">
+      <img src="./assets/images/11.jpg" alt="เมนูอุ่นๆ สำหรับลูกน้อย" loading="lazy" onclick="openLbImg(this)">
+      <div class="who-cap">คุณแม่และลูกน้อย</div>
+    </div>
+    <div class="who-card">
+      <img src="./assets/images/12.jpg" alt="เหมาะกับคนทำงานเร่งรีบ" loading="lazy" onclick="openLbImg(this)">
+      <div class="who-cap">คนทำงานเร่งรีบ</div>
+    </div>
+    <div class="who-card">
+      <img src="./assets/images/13.jpg" alt="ดื่มง่าย สำหรับทุกวัย" loading="lazy" onclick="openLbImg(this)">
+      <div class="who-cap">ผู้สูงอายุ · ทุกวัย</div>
+    </div>
+    <div class="who-card">
+      <img src="./assets/images/14.jpg" alt="ครัวเล็ก คอนโดก็ใช้ได้" loading="lazy" onclick="openLbImg(this)">
+      <div class="who-cap">คอนโด · ครัวเล็ก</div>
+    </div>
+  </div>
+
+  <!-- THAI LOCALIZATION -->
+  <div class="sec-head" style="padding-bottom:14px">
+    <div class="sec-badge">🇹🇭 เมนูคนไทย</div>
+    <h2 class="sec-title" style="font-size:19px">น้ำเต้าหู้ร้อนๆ<em> ทำเองได้ที่บ้าน</em></h2>
+    <p class="sec-sub">รสชาติคุ้นเคย สดใหม่ และคุมหวานได้เอง · ดื่มคู่ปาท่องโก๋ หรือเป็นมื้อเช้าอุ่นๆ ได้ทุกวัน</p>
+  </div>
+  <div class="hiw-img-wrap" style="margin:0 16px 24px;cursor:zoom-in" onclick="openLb(this)">
+    <img src="./assets/images/15.jpg" alt="น้ำเต้าหู้ร้อนๆ ทำเองที่บ้าน" loading="lazy">
+  </div>
+
+  <!-- GUARANTEE -->
+  <div style="padding:0 16px 24px">
+    <div class="guarantee">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      <div class="guarantee-body">
+        <div class="guarantee-title">รับประกันสินค้า 1 ปีเต็ม</div>
+        <div class="guarantee-desc">สินค้าทุกเครื่องมี<b>บัตรรับประกัน</b> และ<b>บริการหลังการขาย</b> ดูแลตลอดอายุการใช้งาน หากสินค้าไม่ตรงตามรายละเอียด ยินดีคืนเงิน — มีทีมงานให้คำปรึกษาทุกขั้นตอน</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-band">
+    <div class="stats-headline">ตัวเลขพิสูจน์ความเชื่อใจ</div>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-num">5K<span>+</span></div>
+        <div class="stat-label">เครื่องที่<br>ขายไปแล้ว</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4.9<span>/5</span></div>
+        <div class="stat-label">คะแนน<br>รีวิวลูกค้า</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1<span>ปี</span></div>
+        <div class="stat-label">รับประกัน<br>เต็มจำนวน</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">48<span>ชม.</span></div>
+        <div class="stat-label">จัดส่ง<br>จากคลัง</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- ─────────── รีวิว ─────────── -->
+<section id="reviews">
+  <div class="rev-section">
+    <div class="sec-badge" style="margin-bottom:12px">⭐ รีวิวจากลูกค้า</div>
+    <div class="rev-header">
+      <div class="rev-score-big">4.9</div>
+      <div class="rev-score-info">
+        <div class="rev-stars-lg">★★★★★</div>
+        <div class="rev-count">จาก 1,128 รีวิว · ขายแล้ว 5,000+ เครื่อง</div>
+        <div style="font-size:11px;color:var(--green);font-weight:600;margin-top:2px">✓ เหตุผลที่หลายบ้านเลือก OSTMARS</div>
+      </div>
+    </div>
+
+    <!-- rating bars -->
+    <div class="rev-bar-wrap">
+      <div class="rev-bar-row"><span class="rev-bar-lbl">5 ★</span><div class="rev-bar-track"><div class="rev-bar-fill" style="width:92%"></div></div><span class="rev-bar-pct">92%</span></div>
+      <div class="rev-bar-row"><span class="rev-bar-lbl">4 ★</span><div class="rev-bar-track"><div class="rev-bar-fill" style="width:6%"></div></div><span class="rev-bar-pct">6%</span></div>
+      <div class="rev-bar-row"><span class="rev-bar-lbl">3 ★</span><div class="rev-bar-track"><div class="rev-bar-fill" style="width:2%"></div></div><span class="rev-bar-pct">2%</span></div>
+    </div>
+
+    <!-- social proof image -->
+    <div class="rev-proof-img" onclick="openLbImg(this.querySelector('img'))">
+      <img src="./assets/images/18.jpg" alt="เสียงตอบรับจากลูกค้า OSTMARS" loading="lazy">
+    </div>
+
+    <div class="rev-list">
+
+      <div class="rev-card">
+        <div class="rev-top">
+          <div class="rev-avatar">ก</div>
+          <div class="rev-meta">
+            <div class="rev-name">กมลชนก พ.</div>
+            <div class="rev-option">ซื้อ 2 เครื่อง</div>
+          </div>
+          <span class="rev-stars-sm">★★★★★</span>
+        </div>
+        <div class="rev-text">
+          "ใช้ทำน้ำเต้าหู้ให้ลูกกินทุกเช้าเลยค่ะ เนียนมาก ไม่ต้องกรอง คุมหวานเองได้ ลูกชอบมาก คุ้มกว่าซื้อข้างนอกเยอะ แถมล้างง่ายด้วย ประทับใจค่ะ"
+        </div>
+        <div class="rev-date">✓ ซื้อจริง · 2 สัปดาห์ที่แล้ว</div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-top">
+          <div class="rev-avatar">ณ</div>
+          <div class="rev-meta">
+            <div class="rev-name">ณัฐพล ส.</div>
+            <div class="rev-option">ซื้อ 1 เครื่อง</div>
+          </div>
+          <span class="rev-stars-sm">★★★★★</span>
+        </div>
+        <div class="rev-text">
+          "อยู่คอนโดทำงานเช้า เครื่องนี้ตอบโจทย์มากครับ แค่ใส่ถั่วเติมน้ำกดปุ่ม รอแป๊บเดียวได้นมถั่วร้อนๆ ดื่มก่อนไปทำงาน เครื่องเล็กวางสวย ไม่เปลืองที่"
+        </div>
+        <div class="rev-date">✓ ซื้อจริง · 1 เดือนที่แล้ว</div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-top">
+          <div class="rev-avatar">ศ</div>
+          <div class="rev-meta">
+            <div class="rev-name">ศิริพร ว.</div>
+            <div class="rev-option">ซื้อ 2 เครื่อง</div>
+          </div>
+          <span class="rev-stars-sm">★★★★★</span>
+        </div>
+        <div class="rev-text">
+          "ซื้อให้ที่บ้านเครื่องนึง ให้คุณแม่อีกเครื่องนึง ทำได้หลายเมนูจริงๆ ทั้งนมข้าวโพด โจ๊ก สมูทตี้ ที่บ้านชอบกันมาก ของแถม E-book สูตรก็มีประโยชน์ ได้ลองทำหลายเมนูเลย"
+        </div>
+        <div class="rev-date">✓ ซื้อจริง · 3 สัปดาห์ที่แล้ว</div>
+      </div>
+
+    </div>
+    <p style="font-size:11px;color:var(--text3);text-align:center;margin-top:14px;line-height:1.5">* รีวิวด้านบนเป็นตัวอย่างเพื่อการนำเสนอ — แนะนำให้แทนด้วยรีวิวจริงจากลูกค้าก่อนเผยแพร่</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ─────────── โปรโมชั่น ─────────── -->
+<section id="promo">
+
+  <div class="promo-block">
+    <div class="sec-head" style="padding:0 0 16px">
+      <div class="sec-badge">🔥 โปรพิเศษวันนี้เท่านั้น!</div>
+      <h2 class="sec-title">เลือก<em>ชุดที่คุ้มที่สุด</em><br>ก่อนโปรหมดคืนนี้!</h2>
+      <p class="sec-sub">ซื้อใช้เองก็ดี ซื้อเป็นของขวัญก็คุ้ม<br>ทุกชุด แถมฟรี E-book 30 สูตร + ส่งฟรีทั่วไทย</p>
+    </div>
+
+    <div class="promo-img-wrap" onclick="openLbImg(this.querySelector('img'))">
+      <img src="./assets/images/20.jpg" alt="โปรพิเศษวันนี้ OSTMARS" loading="lazy">
+    </div>
+
+    <div class="promo-options">
+      <div class="promo-opt">
+        <div class="promo-opt-left">
+          <div class="promo-opt-emoji">🎁</div>
+          <div class="promo-opt-info">
+            <div class="promo-opt-title">ซื้อ 1 เครื่อง</div>
+            <div class="promo-opt-sub">แถม E-book 30 สูตร · ส่งฟรี · COD</div>
+          </div>
+        </div>
+        <div class="promo-opt-price">1,399 ฿</div>
+      </div>
+      <div class="promo-opt pop">
+        <div class="promo-opt-left">
+          <div class="promo-opt-emoji">🎁🎁</div>
+          <div class="promo-opt-info">
+            <div class="promo-opt-title">ซื้อ 2 เครื่อง</div>
+            <div class="promo-opt-sub">ประหยัด 1,299 บาท · แถม E-book · ส่งฟรี</div>
+          </div>
+        </div>
+        <div class="promo-opt-price">2,699 ฿</div>
+        <div class="promo-badge-pin">ขายดีที่สุด!</div>
+      </div>
+      <div class="promo-opt">
+        <div class="promo-opt-left">
+          <div class="promo-opt-emoji">🎁🎁🎁</div>
+          <div class="promo-opt-info">
+            <div class="promo-opt-title">ซื้อ 3 เครื่อง</div>
+            <div class="promo-opt-sub">ประหยัด 1,998 บาท · แถม E-book · ส่งฟรี</div>
+          </div>
+        </div>
+        <div class="promo-opt-price">3,999 ฿</div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:10px 12px;background:linear-gradient(90deg,#FFF5E0 0%,#FFE9C2 100%);border-radius:var(--r8);border:1px solid #FFD898">
+      <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#C44900" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+      <span style="font-size:12px;color:#8A4A00;font-weight:600">โปรสิ้นสุดใน: <span style="color:var(--red);font-weight:800" id="promoCountdown2">--:--:--</span> · อย่าพลาด!</span>
+    </div>
+
+    <button class="promo-cta-btn" onclick="openPopup()">
+      <svg viewBox="0 0 24 24"><path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51C12.96 17.55 11 21 11 21z"/></svg>
+      สั่งซื้อตอนนี้เลย — ก่อนโปรหมด!
+    </button>
+    <div class="promo-cta-note">🚚 ส่งฟรีทั่วไทย · 💳 ชำระปลายทาง COD · 🛡️ รับประกัน 1 ปี</div>
+  </div>
+
+  <!-- SERVICE / COD -->
+  <div class="sec-head">
+    <div class="sec-badge">🚚 บริการ</div>
+    <h2 class="sec-title" style="font-size:19px">สั่งซื้อง่าย<em> มั่นใจได้</em></h2>
+    <p class="sec-sub">บริการสำหรับลูกค้าทั่วไทย — สั่งสบายใจ ได้รับสินค้าชัวร์</p>
+  </div>
+  <div class="hiw-img-wrap" style="margin:0 16px 16px;cursor:zoom-in" onclick="openLb(this)">
+    <img src="./assets/images/19.jpg" alt="บริการสำหรับลูกค้าทั่วไทย" loading="lazy">
+  </div>
+  <div class="svc-list">
+    <div class="svc-item"><div class="svc-ic">🚚</div><div class="svc-tx"><div class="svc-tt">ส่งทั่วไทย</div><div class="svc-ds">รวดเร็ว ถึงมือแน่นอน 2–3 วันทำการ</div></div></div>
+    <div class="svc-item"><div class="svc-ic">💳</div><div class="svc-tx"><div class="svc-tt">เก็บเงินปลายทาง (COD)</div><div class="svc-ds">จ่ายเมื่อได้รับสินค้า ไม่ต้องโอนก่อน</div></div></div>
+    <div class="svc-item"><div class="svc-ic">📦</div><div class="svc-tx"><div class="svc-tt">ตรวจสอบก่อนชำระเงิน</div><div class="svc-ds">มั่นใจทุกออเดอร์ ก่อนจ่ายเงิน</div></div></div>
+    <div class="svc-item"><div class="svc-ic">💬</div><div class="svc-tx"><div class="svc-tt">มีทีมงานให้คำปรึกษา</div><div class="svc-ds">พร้อมดูแลทุกขั้นตอน ก่อนและหลังการขาย</div></div></div>
+    <div class="svc-item"><div class="svc-ic">🎁</div><div class="svc-tx"><div class="svc-tt">แพ็กสินค้าอย่างดี</div><div class="svc-ds">แน่นหนา ปลอดภัย ทุกการจัดส่ง</div></div></div>
+  </div>
+  <div style="padding:14px 16px 4px">
+    <a class="ibtn chat" style="display:flex;width:100%" href="https://m.me/61591016493564" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+      ทักแชทเพื่อสอบถามโปรโมชั่น
+    </a>
+  </div>
+
+  <!-- FAQ -->
+  <div class="sec-head">
+    <h2 class="sec-title" style="font-size:19px">คำถาม<em>ที่ถามบ่อย</em></h2>
+  </div>
+  <div class="faq-wrap">
+
+    <details class="faq-item">
+      <summary class="faq-q">ใช้กับถั่วและธัญพืชชนิดไหนได้บ้าง?</summary>
+      <div class="faq-a">ใช้ได้กับ<b>ถั่วเหลือง อัลมอนด์ ข้าวโพด งา ข้าวโอ๊ต และธัญพืชหลากหลายชนิด</b> ทำได้ทั้งนมถั่ว น้ำเต้าหู้ โจ๊ก สมูทตี้ ชา และเมนูอุ่นร้อน — แถม E-book 30 สูตรให้ลองทำได้หลายเมนู</div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">เสียงดังไหมขณะปั่น? ใช้เวลานานไหม?</summary>
+      <div class="faq-a">มีเสียงระดับปกติของเครื่องปั่นทั่วไป ใช้เวลาทำงาน<b>ไม่นาน</b> ก็ได้เมนูพร้อมดื่ม เครื่องทำงานอัตโนมัติ ไม่ต้องเฝ้า</div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">ทำความสะอาดยากไหม?</summary>
+      <div class="faq-a">ทำความสะอาด<b>ง่ายมาก</b> โถถอดล้างได้ ขัดออกง่าย ไม่ต้องกังวลเรื่องคราบ ใช้แล้วล้างด้วยน้ำได้ทันที</div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">รับประกันไหม? ถ้ามีปัญหาทำยังไง?</summary>
+      <div class="faq-a">มี<b>บัตรรับประกัน 1 ปีเต็ม</b> และบริการหลังการขายดูแลตลอดอายุการใช้งาน หากสินค้าไม่ตรงตามรายละเอียด ยินดีคืนเงิน ติดต่อทีมงานผ่านแชทได้ตลอด</div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">สั่งแล้วได้รับสินค้ากี่วัน? จ่ายยังไง?</summary>
+      <div class="faq-a">จัดส่งภายใน <b>2–3 วันทำการ</b> ทั่วประเทศไทย ชำระแบบ<b>เก็บเงินปลายทาง (COD)</b> ตรวจสินค้าก่อนจ่ายได้ ไม่ต้องโอนก่อน</div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">ใช้ยากไหม? มือใหม่ทำได้ไหม?</summary>
+      <div class="faq-a">ง่ายมากครับ แค่ <b>3 ขั้นตอน</b> — ใส่วัตถุดิบ เติมน้ำ กดปุ่ม เครื่องมีเมนูอัตโนมัติ มือใหม่ก็ทำได้ทันที</div>
+    </details>
+
+  </div>
+
+  <!-- BRAND FOOTER -->
+  <div class="brand-foot">
+    <div class="brand-foot-logo">🥛 OSTMARS</div>
+    <div class="brand-foot-sub">Thailand Official Store</div>
+    <div class="brand-foot-certs">
+      <span class="brand-cert"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>สินค้าแท้ 100%</span>
+      <span class="brand-cert"><svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3a2 2 0 0 0-2 2v11h2a3 3 0 0 0 6 0h6a3 3 0 0 0 6 0h2v-5l-3-4zM6 18.5A1.5 1.5 0 1 1 7.5 17 1.5 1.5 0 0 1 6 18.5zm12 0A1.5 1.5 0 1 1 19.5 17 1.5 1.5 0 0 1 18 18.5zM17 12V9.5h2.5L21.46 12H17z"/></svg>ส่งฟรีทั่วไทย</span>
+      <span class="brand-cert"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>รับประกัน 1 ปี</span>
+    </div>
+    <div class="legal">
+      OSTMARS Thailand · เครื่องทำนมถั่วเพื่อสุขภาพ<br>
+      เว็บไซต์: daiancompany.com<br>
+      © 2026 OSTMARS Thailand · All rights reserved.
+    </div>
+  </div>
+
+</section>
+
+</div><!-- .page -->
+
+<!-- ─────────── STICKY CTA ─────────── -->
+<div class="sticky-cta">
+  <div class="sticky-side">
+    <a class="sticky-btn-side" href="https://m.me/61591016493564" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+      แชท
+    </a>
+    <a class="sticky-btn-side" href="https://www.facebook.com/profile.php?id=61591016493564" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
+      ร้านค้า
+    </a>
+  </div>
+  <div class="sticky-actions">
+    <button class="btn-cart" onclick="openPopup()">เพิ่มตะกร้า</button>
+    <button class="btn-buy" onclick="openPopup()">สั่งซื้อเลย 🔥</button>
+  </div>
+</div>
+
+<!-- ─────────── BUY POPUP ─────────── -->
+<div class="popup-overlay" id="buyPopup">
+  <div class="popup">
+    <div class="popup-drag"></div>
+    <button class="popup-close" onclick="closePopup()"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+
+    <div class="popup-hd">
+      <img class="popup-product-img" src="./assets/images/01.jpg" alt="เครื่องทำนมถั่ว OSTMARS">
+      <div class="popup-product-info">
+        <div class="popup-product-name">เครื่องทำนมถั่ว OSTMARS<br>🎁 แถม E-book 30 สูตร + ส่งฟรี</div>
+        <div class="popup-price" id="popupPrice">2,699 ฿</div>
+        <div class="popup-price-old">ราคาปกติ: 1,999 บาท / เครื่อง</div>
+      </div>
+    </div>
+
+    <div class="popup-body" id="popupForm">
+
+      <div class="popup-sec">
+        <div class="popup-label">เลือกชุดโปรโมชั่น <span class="req">*</span></div>
+        <div class="popup-opts" id="comboOpts">
+          <button class="popup-opt" data-value="ซื้อ 1 เครื่อง — 1,399 บาท" data-price="1399" onclick="selectOpt(this)">
+            🎁 ซื้อ 1 เครื่อง · 1,399 บาท + แถม E-book + ส่งฟรี
+          </button>
+          <button class="popup-opt sel" data-value="ซื้อ 2 เครื่อง — 2,699 บาท" data-price="2699" onclick="selectOpt(this)">
+            🎁🎁 ซื้อ 2 เครื่อง · 2,699 บาท + แถม E-book + ส่งฟรี
+            <span class="opt-badge">ขายดี</span>
+          </button>
+          <button class="popup-opt" data-value="ซื้อ 3 เครื่อง — 3,999 บาท" data-price="3999" onclick="selectOpt(this)">
+            🎁🎁🎁 ซื้อ 3 เครื่อง · 3,999 บาท + แถม E-book + ส่งฟรี
+          </button>
+        </div>
+      </div>
+
+      <div class="popup-sec">
+        <div class="popup-label">ชื่อ-นามสกุล <span class="req">*</span></div>
+        <input class="popup-input" id="fName" type="text" placeholder="กรุณากรอกชื่อ-นามสกุล" autocomplete="name">
+        <div class="err-msg" id="eName">กรุณากรอกชื่อ-นามสกุล</div>
+      </div>
+
+      <div class="popup-sec">
+        <div class="popup-label">เบอร์โทรศัพท์ <span class="req">*</span></div>
+        <input class="popup-input" id="fPhone" type="tel" placeholder="0XX-XXX-XXXX" autocomplete="tel">
+        <div class="err-msg" id="ePhone">กรุณากรอกเบอร์โทรศัพท์</div>
+      </div>
+
+      <div class="popup-sec">
+        <div class="popup-label">ที่อยู่จัดส่ง <span class="req">*</span></div>
+        <textarea class="popup-textarea" id="fAddr" placeholder="บ้านเลขที่, หมู่บ้าน, ตำบล, อำเภอ, จังหวัด, รหัสไปรษณีย์" rows="3" autocomplete="street-address"></textarea>
+        <div class="err-msg" id="eAddr">กรุณากรอกที่อยู่จัดส่ง</div>
+      </div>
+
+      <div class="popup-sec">
+        <div class="popup-label">เลือกสีเครื่อง <span class="req">*</span></div>
+        <div class="popup-opts" id="colorOpts">
+          <button class="popup-opt sel" data-color="สีครีม (Cream)" onclick="selectColor(this)" style="display:flex;align-items:center;gap:10px">
+            <span class="color-dot" style="background:#F1E7D2"></span> สีครีม (Cream)
+          </button>
+          <button class="popup-opt" data-color="สีม่วงลาเวนเดอร์ (Lavender)" onclick="selectColor(this)" style="display:flex;align-items:center;gap:10px">
+            <span class="color-dot" style="background:#CAC3DD"></span> สีม่วงลาเวนเดอร์ (Lavender)
+          </button>
+        </div>
+      </div>
+
+      <input class="honeypot" type="text" id="hp" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="popup-foot" id="popupFoot">
+      <div class="popup-total">
+        <span class="popup-total-lbl">ยอดรวม (ฟรีค่าจัดส่ง)</span>
+        <span class="popup-total-val" id="popupTotal">2,699 ฿</span>
+      </div>
+      <button class="popup-submit" id="submitBtn" onclick="submitOrder()">
+        ✓ ยืนยันคำสั่งซื้อ — ชำระปลายทาง (COD)
+      </button>
+    </div>
+
+    <div class="popup-success" id="popupSuccess">
+      <div class="success-icon">✓</div>
+      <div class="success-title">สั่งซื้อสำเร็จแล้ว! 🎉</div>
+      <div class="success-msg">ขอบคุณที่เลือก OSTMARS ครับ<br>ทีมงานจะโทรยืนยันออเดอร์ภายใน 24 ชั่วโมง<br>กรุณาเตรียมเงินสดสำหรับชำระปลายทาง</div>
+      <div class="order-code" id="orderCode">OST-000000</div>
+      <div style="margin-top:12px;font-size:12px;color:var(--text3)">เก็บหมายเลขนี้ไว้เพื่อติดตามออเดอร์</div>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lb">
+  <button id="lb-close">✕</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+/* ─── HERO GALLERY ─── */
+(function(){
+  var track = document.getElementById('heroTrack');
+  var counter = document.querySelector('.hero-counter');
+  var dots = document.querySelectorAll('.hero-dot');
+  var slides = track.querySelectorAll('.hero-slide');
+  var n = slides.length, cur = 0;
+  function go(i){
+    if(i<0)i=n-1; if(i>=n)i=0; cur=i;
+    track.scrollTo({left:track.clientWidth*cur,behavior:'smooth'});
+    counter.textContent=(cur+1)+' / '+n;
+    dots.forEach(function(d,j){d.classList.toggle('active',j===cur)});
+  }
+  document.querySelector('.hero-arrow.prev').onclick=function(){go(cur-1)};
+  document.querySelector('.hero-arrow.next').onclick=function(){go(cur+1)};
+  track.addEventListener('scroll',function(){
+    var i=Math.round(track.scrollLeft/track.clientWidth);
+    if(i!==cur){cur=i;counter.textContent=(cur+1)+' / '+n;dots.forEach(function(d,j){d.classList.toggle('active',j===cur)})}
+  },{passive:true});
+  setInterval(function(){go(cur+1)},4500);
+})();
+
+/* ─── TAB SCROLLSPY ─── */
+(function(){
+  var tabs=document.querySelectorAll('.tab');
+  var ids=['overview','details','reviews','promo'];
+  var secs=ids.map(function(id){return document.getElementById(id)});
+  function update(){
+    var y=window.scrollY+50,ai=0;
+    secs.forEach(function(s,i){if(s&&s.offsetTop<=y)ai=i});
+    tabs.forEach(function(t,i){t.classList.toggle('active',i===ai)});
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  tabs.forEach(function(tab){
+    tab.addEventListener('click',function(e){
+      e.preventDefault();
+      var t=document.getElementById(tab.getAttribute('href').slice(1));
+      if(t)window.scrollTo({top:t.offsetTop-44,behavior:'smooth'});
+    });
+  });
+})();
+
+/* ─── COUNTDOWN ─── */
+(function(){
+  var end=Date.now()+86400000;
+  function fmt(d){
+    var h=Math.floor(d/3600000),m=Math.floor((d%3600000)/60000),s=Math.floor((d%60000)/1000);
+    return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+  }
+  var el1=document.querySelector('.countdown b');
+  var el2=document.getElementById('promoCountdown2');
+  function tick(){
+    var d=Math.max(0,end-Date.now()),t=fmt(d);
+    if(el1)el1.textContent=t;
+    if(el2)el2.textContent=t;
+  }
+  tick(); setInterval(tick,1000);
+})();
+
+/* ─── POPUP ─── */
+var curOpt={value:'ซื้อ 2 เครื่อง — 2,699 บาท',price:2699};
+
+function fmtBaht(n){return n.toLocaleString('en-US')+' ฿';}
+
+function openPopup(){
+  fbq('track','AddToCart',{content_ids:['OSTMARS-NUT-MILK-MAKER'],value:curOpt.price,currency:'THB'});
+  var o=document.getElementById('buyPopup');
+  o.style.display='flex';
+  setTimeout(function(){o.classList.add('open')},10);
+  document.body.style.overflow='hidden';
+}
+function closePopup(){
+  var o=document.getElementById('buyPopup');
+  o.classList.remove('open');
+  setTimeout(function(){o.style.display='none';document.body.style.overflow=''},280);
+}
+document.getElementById('buyPopup').addEventListener('click',function(e){if(e.target===this)closePopup()});
+
+function selectOpt(btn){
+  document.querySelectorAll('#comboOpts .popup-opt').forEach(function(b){b.classList.remove('sel')});
+  btn.classList.add('sel');
+  curOpt={value:btn.dataset.value,price:+btn.dataset.price};
+  document.getElementById('popupPrice').textContent=fmtBaht(curOpt.price);
+  document.getElementById('popupTotal').textContent=fmtBaht(curOpt.price);
+}
+
+var curColor='สีครีม (Cream)';
+function selectColor(btn){
+  document.querySelectorAll('#colorOpts .popup-opt').forEach(function(b){b.classList.remove('sel')});
+  btn.classList.add('sel');
+  curColor=btn.dataset.color;
+}
+
+function submitOrder(){
+  var name=document.getElementById('fName').value.trim();
+  var phone=document.getElementById('fPhone').value.trim();
+  var addr=document.getElementById('fAddr').value.trim();
+  var hp=document.getElementById('hp').value;
+  var ok=true;
+  function setErr(fid,eid,show){
+    document.getElementById(eid).style.display=show?'block':'none';
+    document.getElementById(fid).classList.toggle('err',show);
+  }
+  if(!name){setErr('fName','eName',true);ok=false}else{setErr('fName','eName',false)}
+  if(!phone){setErr('fPhone','ePhone',true);ok=false}else{setErr('fPhone','ePhone',false)}
+  if(!addr){setErr('fAddr','eAddr',true);ok=false}else{setErr('fAddr','eAddr',false)}
+  if(!ok||hp)return;
+  var btn=document.getElementById('submitBtn');
+  btn.disabled=true;btn.textContent='⏳ กำลังส่งข้อมูล...';
+  var code='OST-'+Date.now().toString().slice(-6);
+  var payload={orderCode:code,product:'เครื่องทำนมถั่ว OSTMARS',option:curOpt.value,color:curColor,price:curOpt.price+' THB',name:name,phone:phone,address:addr,pageUrl:window.location.href,ts:new Date().toISOString()};
+  fbq('track','CompleteRegistration',{content_ids:['OSTMARS-NUT-MILK-MAKER'],value:curOpt.price,currency:'THB',status:'completed'});
+  fetch('https://script.google.com/macros/s/AKfycby0yzR2a1wcsp6t6NNh9OUpY_I-rcfuZTQFnvJ-NGn7cLqs7y8qEZi14ekgDpecMnLdbQ/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)}).catch(function(){});
+  setTimeout(function(){
+    document.getElementById('popupForm').style.display='none';
+    document.getElementById('popupFoot').style.display='none';
+    var s=document.getElementById('popupSuccess');
+    s.style.display='block';
+    document.getElementById('orderCode').textContent=code;
+  },900);
+}
+
+/* ─── LIGHTBOX ─── */
+function openLb(wrap){
+  var img=wrap.querySelector('img');
+  if(!img)return;
+  document.getElementById('lb-img').src=img.src;
+  document.getElementById('lb').classList.add('open');
+}
+function openLbImg(img){
+  if(!img)return;
+  document.getElementById('lb-img').src=img.src;
+  document.getElementById('lb').classList.add('open');
+}
+document.getElementById('lb').addEventListener('click',function(){this.classList.remove('open')});
+document.getElementById('lb-close').addEventListener('click',function(e){e.stopPropagation();document.getElementById('lb').classList.remove('open')});
+</script>
+</body>
+</html>
