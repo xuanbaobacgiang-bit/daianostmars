@@ -941,27 +941,6 @@ a{color:inherit;text-decoration:none}
         </div>
         <div class="promo-opt-price">1,399 ฿</div>
       </div>
-      <div class="promo-opt pop">
-        <div class="promo-opt-left">
-          <div class="promo-opt-emoji">🎁🎁</div>
-          <div class="promo-opt-info">
-            <div class="promo-opt-title">ซื้อ 2 เครื่อง</div>
-            <div class="promo-opt-sub">ประหยัด 1,299 บาท · แถม E-book · ส่งฟรี</div>
-          </div>
-        </div>
-        <div class="promo-opt-price">2,699 ฿</div>
-        <div class="promo-badge-pin">ขายดีที่สุด!</div>
-      </div>
-      <div class="promo-opt">
-        <div class="promo-opt-left">
-          <div class="promo-opt-emoji">🎁🎁🎁</div>
-          <div class="promo-opt-info">
-            <div class="promo-opt-title">ซื้อ 3 เครื่อง</div>
-            <div class="promo-opt-sub">ประหยัด 1,998 บาท · แถม E-book · ส่งฟรี</div>
-          </div>
-        </div>
-        <div class="promo-opt-price">3,999 ฿</div>
-      </div>
     </div>
 
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:10px 12px;background:linear-gradient(90deg,#FFF5E0 0%,#FFE9C2 100%);border-radius:var(--r8);border:1px solid #FFD898">
@@ -1095,15 +1074,8 @@ a{color:inherit;text-decoration:none}
       <div class="popup-sec">
         <div class="popup-label">เลือกชุดโปรโมชั่น <span class="req">*</span></div>
         <div class="popup-opts" id="comboOpts">
-          <button class="popup-opt" data-value="ซื้อ 1 เครื่อง — 1,399 บาท" data-price="1399" onclick="selectOpt(this)">
+          <button class="popup-opt sel" data-value="ซื้อ 1 เครื่อง — 1,399 บาท" data-price="1399" onclick="selectOpt(this)">
             🎁 ซื้อ 1 เครื่อง · 1,399 บาท + แถม E-book + ส่งฟรี
-          </button>
-          <button class="popup-opt sel" data-value="ซื้อ 2 เครื่อง — 2,699 บาท" data-price="2699" onclick="selectOpt(this)">
-            🎁🎁 ซื้อ 2 เครื่อง · 2,699 บาท + แถม E-book + ส่งฟรี
-            <span class="opt-badge">ขายดี</span>
-          </button>
-          <button class="popup-opt" data-value="ซื้อ 3 เครื่อง — 3,999 บาท" data-price="3999" onclick="selectOpt(this)">
-            🎁🎁🎁 ซื้อ 3 เครื่อง · 3,999 บาท + แถม E-book + ส่งฟรี
           </button>
         </div>
       </div>
@@ -1228,7 +1200,7 @@ a{color:inherit;text-decoration:none}
 })();
 
 /* ─── POPUP ─── */
-var curOpt={value:'ซื้อ 2 เครื่อง — 2,699 บาท',price:2699};
+var curOpt={value:'ซื้อ 1 เครื่อง — 1,399 บาท',price:1399};
 
 function fmtBaht(n){return n.toLocaleString('en-US')+' ฿';}
 

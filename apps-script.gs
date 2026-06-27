@@ -30,8 +30,9 @@ function doPost(e) {
       sh.setFrozenRows(1);
       sh.getRange(1, 1, 1, HEADERS.length).setFontWeight('bold');
     }
+    var thoiGian = Utilities.formatDate(new Date(), 'Asia/Ho_Chi_Minh', 'dd/MM/yyyy HH:mm:ss');
     sh.appendRow([
-      new Date(),
+      thoiGian,
       data.orderCode || '',
       data.product || '',
       data.option || '',
